@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Footer() {
+export default function Footer(): JSX.Element {
   return (
-    <div>Footer</div>
+    <div>FC</div>
   )
 }
