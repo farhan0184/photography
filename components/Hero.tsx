@@ -48,7 +48,7 @@ export default function Hero(): React.JSX.Element {
                         <div className='text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]'>
                             Photography
                         </div>
-                        <h1 className='h1 uppercase'>Let's make magic !</h1>
+                        <h1 className='h1 uppercase'>Let&apos;s make magic !</h1>
                         <p className='subtitle max-w-[590px] mt-4 mx-auto xl:mx-0'>We are fine art, nature & portrait film photographers from San Francisco, with a special love for natural light, medium format film cameras & redheads with freckles.</p>
 
                         {/* subscribe button */}
