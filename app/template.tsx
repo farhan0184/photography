@@ -15,7 +15,7 @@ const variants = {
 
 export default function tamplate({children}: {children: React.ReactNode}) {
   const progress = useScrollProgress();
-  console.log(progress)
+  // console.log(progress)
   return (
     <>
       <motion.main
