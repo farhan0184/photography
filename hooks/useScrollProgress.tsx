@@ -1,9 +1,8 @@
-'use client'
 import React from 'react'
 
 
 
-export default function useScrollProgress() {
+const useScrollProgress =()=> {
     const [completion, setCompletion] = React.useState(0)
 
     React.useEffect(() => {
@@ -21,3 +20,5 @@ export default function useScrollProgress() {
     }, [])
     return completion
 }
+
+export default useScrollProgress
