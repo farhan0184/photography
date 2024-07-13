@@ -14,7 +14,7 @@ const variants = {
 }
 
 export default function tamplate({children}: {children: React.ReactNode}) {
-  const progress: number = useScrollProgress()
+  const progress = useScrollProgress();
   return (
     <>
       <motion.main
