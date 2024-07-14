@@ -11,14 +11,14 @@ export default function Project({project}:{project:GalleryProps}) {
     <Card className='group overflow-hidden relative'>
         <CardHeader className='p-0'>
             {/* image */}
-            <div className='relative w-full h-[290px] flex justify-center items-center dark:bg-secondary/40 xl:bg-[100%] xl:bg-no-repeat'>
+            <div className='relative w-full h-[290px] flex justify-center items-center dark:bg-secondary/40 xl:bg-[100%] xl:bg-no-repeat overflow-hidden'>
                 <Image
                  src={project.image}
                  width={440}
                  height={200}
                  alt=''
                  priority
-                 className='absolute top-0 shadow-2xl hover:scale-110 transition-all'
+                 className='absolute top-0 w-full shadow-2xl  hover:scale-110 transition-all'
                 />
                 <div className='flex gap-x-4'>
                   <Link 
@@ -41,7 +41,7 @@ export default function Project({project}:{project:GalleryProps}) {
           <Badge className='absolute top-4 left-5 uppercase text-sm font-medium mb-2'>
             {project.category}
           </Badge>
-          <h4 className='h4 mb-1'>{project.name}</h4>
+          <h4 className='h4 mb-1 '>{project.name}</h4>
           <p className='text-muted-foreground text-lg'>{project.description}</p>
         </div>
 

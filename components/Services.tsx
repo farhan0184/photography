@@ -34,7 +34,7 @@ export default function Services() {
             <h2 className='section-title mb-6 xl:mb-24 text-center mx-auto'>Our Services</h2>
 
             {/* category */}
-            <div className='grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8'>
+            <div className='grid xl:grid-cols-3 md:grid-cols-2 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8 sm:gap-x-4'>
                 {
                     servicesData.map((service, idx) => (
                         <Card key={idx} className='relative w-full max-w-[425px] h-[450px] flex flex-col pb-10 justify-center items-center cursor-pointer hover:bg-tertiary dark:hover:bg-white/10 transition-all duration-700'>

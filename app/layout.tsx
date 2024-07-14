@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 import "./globals.css";
 
+// add toaster
+import { Toaster } from "@/components/ui/toaster"
+
 // import Components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -14,7 +17,7 @@ interface SenFontOptions {
 }
 
 
-const SenFont = Sen({ 
+const SenFont = Sen({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
@@ -34,9 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={SenFont.className}>
+        <Toaster />
         <ThemeProvider attribute="class" defaultTheme="light">
 
           <Header />
+
           {children}
           <Footer />
         </ThemeProvider>
