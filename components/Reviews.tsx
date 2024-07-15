@@ -9,6 +9,7 @@ import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Card, CardDescription, CardHeader, CardTitle } from './ui/card';
 import Image from 'next/image';
+import { Fade } from 'react-awesome-reveal';
 
 interface ReviewsData {
     avatar: string
@@ -66,57 +67,62 @@ export default function Reviews() {
     return (
         <section className='mb-12 xl:mb-32'>
             <div className='container mx-auto'>
-                <h2 className='section-title mb-12 text-center mx-auto'>
-                    This say about our work
-                </h2>
+                <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
+                    <h2 className='section-title mb-12 text-center mx-auto'>
+                        This say about our work
+                    </h2>
+                </Fade>
 
                 {/* slider */}
-                <Swiper
-                    slidesPerView={1}
-                    breakpoints={{
-                        640: { slidesPerView: 2 },
-                        1400: { slidesPerView: 3 },
-                    }}
-                    spaceBetween={30}
-                    modules={[Pagination]}
-                    pagination={{
-                        clickable: true
-                    }}
-                    className='h-[350px]'
-                >
-                    {
-                        reviewsData.map((person: ReviewsData, idx: number) => (
-                            <SwiperSlide key={idx}>
-                                <Card className='p-8 min-h-[300px] cursor-pointer hover:bg-tertiary dark:hover:bg-white/10 transition-all duration-700' >
-                                    <CardHeader className='p-0 mb-3'>
-                                        <div className='flex flex-col items-start gap-x-4'>
-                                            <Image
-                                                src={person.avatar}
-                                                alt={person.name}
-                                                width={70}
-                                                height={70}
-                                                priority
-                                                className='mb-2'
-                                            />
-                                        </div>
+                <Fade direction='up' delay={600} cascade damping={1e-1} triggerOnce={true}>
+                    <Swiper
+                        slidesPerView={1}
+                        breakpoints={{
+                            640: { slidesPerView: 2 },
+                            1400: { slidesPerView: 3 },
+                        }}
+                        spaceBetween={30}
+                        modules={[Pagination]}
+                        pagination={{
+                            clickable: true
+                        }}
+                        className='h-[350px]'
+                    >
 
-                                        {/* name */}
-                                        <div className='flex flex-col'>
-                                            <CardTitle>
-                                                {person.name}
-                                            </CardTitle>
-                                            <p>{person.job}</p>
-                                        </div>
-                                    </CardHeader>
-                                    <CardDescription className='text-lg text-muted-foreground'>
-                                        {person.review}
-                                    </CardDescription>
+                        {
+                            reviewsData.map((person: ReviewsData, idx: number) => (
+                                <SwiperSlide key={idx}>
+                                    <Card className='p-8 min-h-[300px] cursor-pointer hover:bg-tertiary dark:hover:bg-white/10 transition-all duration-700' >
+                                        <CardHeader className='p-0 mb-3'>
+                                            <div className='flex flex-col items-start gap-x-4'>
+                                                <Image
+                                                    src={person.avatar}
+                                                    alt={person.name}
+                                                    width={70}
+                                                    height={70}
+                                                    priority
+                                                    className='mb-2'
+                                                />
+                                            </div>
 
-                                </Card>
-                            </SwiperSlide>
-                        ))
-                    }
-                </Swiper>
+                                            {/* name */}
+                                            <div className='flex flex-col'>
+                                                <CardTitle>
+                                                    {person.name}
+                                                </CardTitle>
+                                                <p>{person.job}</p>
+                                            </div>
+                                        </CardHeader>
+                                        <CardDescription className='text-lg text-muted-foreground'>
+                                            {person.review}
+                                        </CardDescription>
+
+                                    </Card>
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
+                </Fade>
             </div>
         </section>
     )

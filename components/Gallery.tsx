@@ -1,5 +1,7 @@
+'use client'
 import React from 'react'
 import Project from './Project'
+import { Fade } from 'react-awesome-reveal'
 
 export interface GalleryProps {
     image: string
@@ -81,16 +83,19 @@ export default function Gallery() {
     return (
         <section className='relative mb-12 xl:mb-36'>
             <div className='container mx-auto'>
-                <h2 className='section-title mb-6 xl:mb-16 text-center mx-auto'>My Gallery</h2>
+                <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
+                    <h2 className='section-title mb-6 xl:mb-16 text-center mx-auto'>My Gallery</h2>
+                </Fade>
 
 
                 {/* gallery */}
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-                    {
-                        GalleryData.map((project: GalleryProps, idx: number) => (
+                    <Fade direction='up' delay={600} cascade damping={1e-1} triggerOnce={true}>
+                        {GalleryData.map((project: GalleryProps, idx: number) => (
                             <Project key={idx} project={project} />
                         ))
-                    }
+                        }
+                    </Fade>
                 </div>
             </div>
         </section>

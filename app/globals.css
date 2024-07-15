@@ -100,3 +100,24 @@
 .swiper-pagination-bullet{
   @apply bg-primary;
 }
+
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #9e0344;
+  transform-origin: 0%;
+}
+
+.scrollx {
+  overflow-x: scroll;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.scrollx::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
