@@ -13,7 +13,7 @@ const variants = {
   enter: {opacity: 1},
 }
 
-export default function tamplate({children}: {children: React.ReactNode}) {
+export default function Template({children}: {children: React.ReactNode}) {
   const progress = useScrollProgress();
   // console.log(progress)
   return (
