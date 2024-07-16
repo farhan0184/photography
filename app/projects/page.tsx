@@ -92,7 +92,7 @@ const uniqueCategories: string[] = [
   ...Array.from(new Set(projectData.map((item) => item.category)))
 ]
 
-export default function Portfolio(): React.JSX.Element {
+export default function Projects(): React.JSX.Element {
   const [categories, setCategories] = React.useState(uniqueCategories)
   const [category, setCategory] = React.useState('all projects')
 

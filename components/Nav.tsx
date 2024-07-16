@@ -23,7 +23,7 @@ interface LinkProps {
 const links: LinkProps[] = [
     {path: "/", name: "Home"},
     {path: "/about", name: "About"},
-    {path: "/potfolio", name: "Portfolio"},
+    {path: "/projects", name: "Projects"},
     {path: "/pricing", name: "Pricing"},
     {path: "/contact", name: "Contact"},
 ] 
